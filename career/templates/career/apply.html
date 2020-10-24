@@ -1,0 +1,17 @@
+{% extends "career/base.html" %}
+{% block content %}
+<div class="container">
+    
+        <article class="media content-section my-auto">
+            <div class="media-body my-auto">
+                
+                <h3 class="article-title" >{{ job.title }}</h3>
+                <p class="article-content">{{ job.content }}</p>
+               
+                <a href="{% url 'job-application' %}" class="btn btn-primary">Apply Now</a>
+                
+            </div>
+        </article>
+    
+</div>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "career/base.html" %}
+{% block content %}
+<div class="container">
+    {% for job in jobs %}
+        <article class="media content-section">
+            <div class="media-body">
+                
+                <h3><a class="article-title" href="{% url 'job-apply' %}">{{ job.title }}</a></h3>
+
+                <p class="article-content">{{ job.content }}</p>
+                <small class="text-muted"> posted on:{{ job.date_posted|date:"F d,Y" }}</small>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+{% endblock content %}
